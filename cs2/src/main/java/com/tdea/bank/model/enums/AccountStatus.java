@@ -1,4 +1,4 @@
-package app.model.enums;
+package com.tdea.bank.model.enums;
 
 public enum AccountStatus {
 

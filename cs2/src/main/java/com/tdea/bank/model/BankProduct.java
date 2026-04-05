@@ -1,18 +1,21 @@
-package app.model;
+
+package com.tdea.bank.model;
+
+import com.tdea.bank.model.enums.ProductType;
 
 public class BankProduct {
 
     private Long id;
     private String name;
     private String description;
-    private String productType;
+    private ProductType productType;
     private boolean active;
 
     public BankProduct() {
     }
 
     public BankProduct(Long id, String name, String description,
-            String productType, boolean active) {
+            ProductType productType, boolean active) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -32,7 +35,7 @@ public class BankProduct {
         return description;
     }
 
-    public String getProductType() {
+    public ProductType getProductType() {
         return productType;
     }
 
@@ -48,7 +51,7 @@ public class BankProduct {
         this.description = description;
     }
 
-    public void setProductType(String productType) {
+    public void setProductType(ProductType productType) {
         this.productType = productType;
     }
 

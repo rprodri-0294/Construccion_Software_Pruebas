@@ -1,6 +1,8 @@
-package app.model;
 
-import app.model.enums.UserRole;
+package com.tdea.bank.model;
+
+import com.tdea.bank.model.enums.UserRole;
+import com.tdea.bank.model.enums.UserStatus;
 
 public class User {
 
@@ -10,20 +12,23 @@ public class User {
     private String fullName;
     private String email;
     private UserRole role;
-    private boolean active;
+    private UserStatus status;
+
+    private Customer customer;
 
     public User() {
     }
 
     public User(Long id, String username, String password, String fullName,
-            String email, UserRole role, boolean active) {
+            String email, UserRole role, UserStatus status, Customer customer) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.fullName = fullName;
         this.email = email;
         this.role = role;
-        this.active = active;
+        this.status = status;
+        this.customer = customer;
     }
 
     public Long getId() {
@@ -50,8 +55,12 @@ public class User {
         return role;
     }
 
-    public boolean isActive() {
-        return active;
+    public UserStatus getStatus() {
+        return status;
+    }
+
+    public Customer getCustomer() {
+        return customer;
     }
 
     public void setUsername(String username) {
@@ -74,7 +83,11 @@ public class User {
         this.role = role;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setStatus(UserStatus status) {
+        this.status = status;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }
